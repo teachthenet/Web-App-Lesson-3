@@ -1,5 +1,11 @@
 # Web-App-Lesson-3
 
+# Description
+
+In this lesson, we'll be using Google Forms and a Spreadsheet to setup a dynamic website.
+
+# Setup
+
 Create a Google Form: https://docs.google.com/forms/
 
 When done, click Send, then copy the code from the Embed tab. It should look like this:
