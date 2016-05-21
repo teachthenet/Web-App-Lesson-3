@@ -1,5 +1,7 @@
 # Web-App-Lesson-3
 
+Create Google Spreadsheet, and follow directions here for Step #1:
+https://github.com/jsoma/tabletop
 
 1) Add new funny picture
 
