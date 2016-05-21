@@ -16,7 +16,7 @@ When done, click Send, then copy the code from the Embed tab. It should look lik
 
 And add that to index.html in place of the existing iframe code.
 
-Now back to your form. Click the Responses tab, click Create Spreadsheet. Open the spreadsheet, click File, Publish, and get the link. Stick the link in index.html in the variable named public_spreadsheet_url.
+Now back to your form. Click the Responses tab, click Create Spreadsheet. Open the spreadsheet, click File, Publish to the web, and get the link. Stick the link in index.html in the variable named public_spreadsheet_url.
 
 Now in index.html, you may need to update the variable names in the "row" variable, depending on what you named each field in the form.
 
