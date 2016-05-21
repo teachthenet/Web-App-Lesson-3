@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src='tabletop.js'></script>
+<script src='jquery-1.12.4.min.js'></script>
+<script type="text/javascript">
+  window.onload = function() { init() };
+
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1FiFo3YCz0b2KrMKLhzVmcTwO5QqZK5vOVd2XlkGyiaQ/pubhtml';
+
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true } )
+  }
+
+  function showInfo(data, tabletop) {
+    console.log(data); //you can view this in the chrome inspector
+    var html_code = "";
+    jQuery.each(data, function(index, row){
+        html_code += "<img src='"+row['Image URL']+"'><br>";
+        html_code += "Comment: "+row['Comment']+"<br>";
+        html_code += "Tag: "+row['Tag']+"<br>";
+        html_code += "Posted on: "+row['Timestamp']+"<br>";
+        html_code += "<hr>";
+    });
+    jQuery('#stream').html(html_code);
+  }
+</script>
+<style>
+    #stream {
+        height: 100%;
+        width: 50%;
+    }
+    #google_form {
+        height: 100%;
+        width: 50%;
+    }
+</style>
+</head>
+<body>
+    <div id='stream'></div>
+    <div id='google_form'>
+    <iframe src="https://docs.google.com/forms/d/1U3l9A9IQhV9S4htGRh5p_rgQzlyQPeK-02UF_yS_6ng/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></div>
+</body>
+</html>
